@@ -1,0 +1,9 @@
+create table workoutData(
+id int key AUTO_INCREMENT NOT NULL,
+userid int,
+distance int,
+calories int,
+swimTime time,
+equipment text,
+strokes text
+)
