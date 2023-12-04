@@ -1,9 +1,21 @@
-create table workoutData(
-id int key AUTO_INCREMENT NOT NULL,
-userid int,
-distance int,
-calories int,
-swimTime time,
-equipment text,
-strokes text
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fName` varchar(50) DEFAULT NULL,
+  `LName` varchar(50) DEFAULT NULL,
+  `pDesc` text,
+  `Location` varchar(100) DEFAULT NULL,
+  `swimSince` int(11) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `usrname` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
 )
+
+
+CREATE TABLE `swimWorkouts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) DEFAULT NULL,
+  `workoutData` json NOT NULL,
+  PRIMARY KEY (`id`)
+) 
